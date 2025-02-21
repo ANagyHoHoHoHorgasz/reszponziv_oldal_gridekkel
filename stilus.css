@@ -1,21 +1,28 @@
 body {
+    background-color: greenyellow;
+}
+
    
 header {
     background-color: green;
     text-transform: uppercase;
-   
+    border: 5px solid black;
     border-radius: 10px;
+    text-align: center;
    
 }
 a {
     color:black;
-  
+    text-decoration: none;
     border: 4px solid black;
     border-radius: 8px;
     margin: 5px;
     white-space: nowrap; /* chatgpt kód */
     display: inline-block; /*chatgpt kód */
-      
+    padding: 5px;
+}
+a:hover {
+    background-color: greenyellow;
 }
 
 nav {
@@ -26,13 +33,13 @@ nav {
     box-sizing: border-box;
 }
 img {
- 
+    max-width: auto;
     border: 5px solid black;
     border-radius: 10px;
 }
 section {
     margin-top: 10px;
-    padding: 5px;
+    padding: 10px;
     border: 5px solid black;
     border-radius: 15px;
     background-color: green;
@@ -43,13 +50,28 @@ p {
     background-color: greenyellow;
 }
 article {
-    
+    display: grid;
     gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 #bekezdes_footer {
     background-color: green;
     border: 5px solid black;
     font-size: large;
 }
-
-
+@media screen and (max-width: 800px) {
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+}
